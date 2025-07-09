@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="/static/css/style1.css">
+</head>
+<body>
+    <section class="container">
+        <header>Registration Form</header>
+        <form id="form" action="/register" method="post">
+            <div class="input-box">
+                <label for="full_name">Full Name</label>
+                <input type="text" id="full_name" name="full_name" placeholder="Enter full name" autocomplete="off" required/>
+            </div>
+            <div class="input-box">
+                <label for="aadhar_card_no">Aadhar Card no.</label>
+                <input type="text" id="aadhar_card_no" name="aadhar_card_no" placeholder="Enter Aadhar Card no." autocomplete="off" required/>
+            </div>
+            <div class="input-box">
+                <label for="voter_id">Voter ID</label>
+                <input type="text" id="voter_id" name="voter_id" placeholder="Enter Voter ID." autocomplete="off" required/>
+            </div>
+            <div class="column">
+                <div class="input-box">
+                    <label for="phone_no">Phone no.</label>
+                    <input type="text" id="phone_no" name="phone_no" placeholder="Enter 10 digit number" autocomplete="off" required/>
+                </div>   
+                <div class="input-box">
+                    <label for="birth_date">Birth date</label>
+                    <input type="date" id="birth_date" name="birth_date" placeholder="Minimum 18 years required" required/>
+                </div> 
+            </div>
+            <div class="gender-box">
+                <h3>Gender</h3>
+                <div class="gender-option">
+                    <div class="gender">
+                        <input type="radio" id="check-male" name="gender" value="male" checked/>
+                        <label for="check-male">Male</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check-female" name="gender" value="female"/>
+                        <label for="check-female">Female</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check-other" name="gender" value="other" />
+                        <label for="check-other">Other</label>
+                    </div>
+                </div>
+            </div>
+            <div class="input-box address">
+                <label for="address_line1">Address</label>
+                <input type="text" id="address_line1" name="address_line1" placeholder="Address Line 1" required/>
+                <input type="text" id="address_line2" name="address_line2" placeholder="Address Line 2" required/>
+                <input type="text" id="address_line3" name="address_line3" placeholder="Address Line 3"/>
+            </div>
+            <div id="errorAlert" class="alert alert-danger" role="alert" style="display: none;"></div>
+
+            <div class="alert alert-success" role="alert" id="success" style="display: none;"></div>
+            <button type="submit" >Submit</button>
+        </form>
+        <p>Already have an account? <a href="/login">Login</a></p>
+    </section>
+    <!-- <script src="/js/register.js"></script> -->
+</body>
+</html>
